@@ -8,11 +8,8 @@ local modules = {
 "checks/speed-1", 
 
 --fly
-"checks/fly-1",
-"checks/fly-2",
-
---noclip (dont use, buggy)
---"checks/noclip-1",
+--"checks/fly-1",
+--"checks/fly-2",
 }
 
 for _, module in pairs(modules) do
