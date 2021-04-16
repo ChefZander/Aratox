@@ -2,6 +2,6 @@
 Minetest Anticheat. Remove cheaters from your game faster.
 
 Why us?
-* "Auto-Bans", Automaic Bans to remove cheaters.
+* "Auto-Kicks", Automaic Kicks to remove cheaters from the game insted of live cheat-prevention
 * Very reliable Speed and Fly detection
 * ...
