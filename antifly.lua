@@ -1,4 +1,5 @@
 local function fly_check(player)
+    local name = player:get_player_name()
 	local pos = player:get_pos()
 	if not pos then return true end
 	if minetest.check_player_privs(player:get_player_name(), {fly = true}) then
@@ -13,6 +14,16 @@ local function fly_check(player)
 	end
 
 	return true
+end
+
+local oldpos = {}
+
+local function posdel(player)
+	if fly_check(player) then
+		oldpos[player:get_player_name()] = nil
+	else
+		minetest.after(3, posdel, player)
+	end
 end
 
 minetest.register_globalstep(function(dtime)
