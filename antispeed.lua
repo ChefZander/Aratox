@@ -5,7 +5,7 @@ minetest.register_globalstep(function(dtime)
 		local playerVelocity = player:get_player_velocity()
 
 		if math.abs(playerVelocity.x) > speed_limit or math.abs(playerVelocity.z) > speed_limit then
-			minetest.kick_player(player:get_player_name(), "Aratox caught you cheating! (AntiCheat)")
+			minetest.kick_player(player:get_player_name(), "\n\nAratox caught you cheating! (AntiCheat)\n[SPEED-AMTAC-1]")
 		end
 	end
 end)
