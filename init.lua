@@ -1,7 +1,7 @@
 local modpath = minetest.get_modpath("aratox")
 
 local modules = {
---autihandle
+--autohandle
 "autohandle", 
 
 --speed
