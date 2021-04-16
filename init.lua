@@ -10,17 +10,19 @@ local modules = {
 "checks/speed-1", 
 
 --fly
---"checks/fly-1",
---"checks/fly-2",
+"checks/fly-1",
+"checks/fly-2",
 }
 
 for _, module in pairs(modules) do
     dofile(modpath .. "/" .. module .. ".lua")
 end
 
-minetest.register_chatcommand("aratox", 
-    description = "Returns The Current Version Of Th Installed Aratox Anticheat",
+minetest.register_chatcommand("aratox", {
+    description = "Returns The Current Version Of The Installed Aratox Anticheat",
+    params = "",
+    privs = {shout = true},
     func = function(playername, param)
-        minetest.chat_send_player(playername, "Aratox v" .. version .. " by Zander_200")
-    end
-)
+        minetest.chat_send_player(playername, "Aratox Anticheat v" .. version .. " (~Zander_200)")
+    end,
+})
