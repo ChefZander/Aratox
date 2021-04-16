@@ -7,15 +7,16 @@ minetest.register_globalstep(function(dtime)
 		local pos = player:get_pos()
         local velo = player:get_velocity()
         local vY = math.abs(velo.y)
-		if(vZ == 0 and minetest.get_node({x = pos.x, y = pos.y - 1, z = pos.z}).name == "air") then
+		if(vY == 0 and minetest.get_node({x = pos.x, y = pos.y - 1, z = pos.z}).name == "air") then
             if oldpos[name] == nil then
                 oldpos[name] = pos
             else
-                if(vZ == 0 and not pos == oldpos[name]) then 
+                if(vY == 0) then 
                     -- cheating
-                    minetest.chat_send_all("works"))
+                    minetest.kick_player(name, "\n\nAratox caught you cheating! (AntiCheat)\n[FLY-2]")
                 end
             end
         end
 	end
 end)
+

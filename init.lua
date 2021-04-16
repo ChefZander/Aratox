@@ -8,7 +8,7 @@ local modules = {
 "checks/speed-1", 
 
 --fly
---"checks/fly-1"
+"checks/fly-1",
 "checks/fly-2",
 }
 
