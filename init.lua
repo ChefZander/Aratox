@@ -10,6 +10,9 @@ local modules = {
 --fly
 "checks/fly-1",
 "checks/fly-2",
+
+--noclip
+"checks/noclip-1",
 }
 
 for _, module in pairs(modules) do
