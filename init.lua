@@ -11,8 +11,8 @@ local modules = {
 "checks/fly-1",
 "checks/fly-2",
 
---noclip
-"checks/noclip-1",
+--noclip (dont use, buggy)
+--"checks/noclip-1",
 }
 
 for _, module in pairs(modules) do
