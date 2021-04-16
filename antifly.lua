@@ -35,9 +35,10 @@ minetest.register_globalstep(function(dtime)
 			if oldpos[name] then
 				player:set_pos(oldpos[name])
 			end
-			minetest.kick_player(player:get_player_name(), "Aratox caught you cheating! (AntiCheat)")
+            if not oldpos[name] then oldpos[name] = pos end
+			minetest.kick_player(player:get_player_name(), "\n\nAratox caught you cheating! (AntiCheat)\n[FLY-AMTAC]")
 
-			if not oldpos[name] then oldpos[name] = pos end
+			
 			minetest.after(3, posdel, player)
 		end
 	end
