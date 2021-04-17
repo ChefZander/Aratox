@@ -1,4 +1,4 @@
-local version = "1.0.0"
+local version = "1.1.0"
 
 local modpath = minetest.get_modpath("aratox")
 
