@@ -15,7 +15,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 local cheatcount = {}
 
-minetest.register_globalstep(function(dtime)
+function aratox_checks.fly_2()
     local players = minetest.get_connected_players()
 	for _, player in ipairs(players) do
 		local name = player:get_player_name()
@@ -54,4 +54,4 @@ minetest.register_globalstep(function(dtime)
         end
         
 	end
-end)
+end

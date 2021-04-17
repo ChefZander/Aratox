@@ -1,4 +1,4 @@
-minetest.register_globalstep(function(dtime)
+function aratox_checks.speed_1()
 	local speed_limit = tonumber(minetest.settings:get("movement_speed_walk"))
 	local players = minetest.get_connected_players()
 	for _, player in ipairs(players) do
@@ -8,4 +8,4 @@ minetest.register_globalstep(function(dtime)
 			minetest.kick_player(player:get_player_name(), "\n\nAratox caught you cheating! (AntiCheat)\n[SPEED-1]")
 		end
 	end
-end)
+end

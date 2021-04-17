@@ -26,7 +26,7 @@ local function posdel(player)
 	end
 end
 
-minetest.register_globalstep(function(dtime)
+function aratox_checks.fly_1()
 	local players = minetest.get_connected_players()
 	for _, player in ipairs(players) do
 		local name = player:get_player_name()
@@ -42,4 +42,4 @@ minetest.register_globalstep(function(dtime)
 			minetest.after(3, posdel, player)
 		end
 	end
-end)
+end

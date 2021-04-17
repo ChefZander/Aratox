@@ -16,6 +16,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 local version = "1.1.0"
 
 local modpath = minetest.get_modpath("aratox")
+aratox_checks = {}
 
 local modules = {
 --autohandle
@@ -41,3 +42,13 @@ minetest.register_chatcommand("aratox", {
         minetest.chat_send_player(playername, "Aratox Anticheat v" .. version .. " (~Zander_200)")
     end,
 })
+
+minetest.register_globalstep(function(dtime)
+    --fly
+    aratox_checks.fly_1()
+    aratox_checks.fly_2()
+
+    --speed
+    aratox_checks.speed_1()
+
+end)
