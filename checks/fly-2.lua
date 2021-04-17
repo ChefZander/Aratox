@@ -5,6 +5,7 @@ minetest.register_globalstep(function(dtime)
 	for _, player in ipairs(players) do
 		local name = player:get_player_name()
 		local pos = player:get_pos()
+        if minetest.check_player_privs(name, {fly = true}) then return end
         local velo = player:get_velocity()
         local vY = math.abs(velo.y)
 		if(vY == 0 and 
@@ -30,6 +31,7 @@ minetest.register_globalstep(function(dtime)
                 cheatcount[name] = 5
             elseif cheatcount[name] == 5 then
                 minetest.kick_player(name, "\n\nAratox caught you cheating! (AntiCheat)\n[FLY-2]")
+                cheatcount[name] = nil
             end
         end
 	end
