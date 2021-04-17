@@ -7,7 +7,17 @@ minetest.register_globalstep(function(dtime)
 		local pos = player:get_pos()
         local velo = player:get_velocity()
         local vY = math.abs(velo.y)
-		if(vY == 0 and minetest.get_node({x = pos.x, y = pos.y - 1, z = pos.z}).name == "air") then
+		if(vY == 0 and 
+            minetest.get_node({x = pos.x, y = pos.y - 1, z = pos.z}).name == "air" and 
+            minetest.get_node({x = pos.x -1, y = pos.y - 1, z = pos.z}).name == "air" and 
+            minetest.get_node({x = pos.x +1, y = pos.y - 1, z = pos.z}).name == "air" and 
+            minetest.get_node({x = pos.x, y = pos.y - 1, z = pos.z -1}).name == "air" and 
+            minetest.get_node({x = pos.x, y = pos.y - 1, z = pos.z +1}).name == "air" and 
+            minetest.get_node({x = pos.x +1, y = pos.y - 1, z = pos.z +1}).name == "air" and 
+            minetest.get_node({x = pos.x -1, y = pos.y - 1, z = pos.z -1}).name == "air" and 
+            minetest.get_node({x = pos.x +1, y = pos.y - 1, z = pos.z -1}).name == "air" and 
+            minetest.get_node({x = pos.x -1, y = pos.y - 1, z = pos.z +1}).name == "air" and 
+            ) then
             if cheatcount[name] == nil then
                 cheatcount[name] = 1
             elseif cheatcount[name] == 1 then
