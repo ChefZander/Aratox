@@ -8,6 +8,11 @@ Minetest Anticheat. Remove cheaters from your game faster.
 * Easy check configuration (en and disabling)
 * ...
 
+#### Checks
+* Fly
+* Speed
+* Vanilla
+
 #### Important Notice
 Some checks are made by the AMTAC Group. These checks were adopted by their "AMTAC" (Advanced MineTest AntiCheat) Anti Cheat. You can view the AMTAC Anticheat repositoy [here](https://github.com/Minetest-j45/Advanced-MineTest-AntiCheat). Big thanks to them making some of this possible
 
