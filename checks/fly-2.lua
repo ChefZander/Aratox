@@ -16,7 +16,7 @@ minetest.register_globalstep(function(dtime)
             minetest.get_node({x = pos.x +1, y = pos.y - 1, z = pos.z +1}).name == "air" and 
             minetest.get_node({x = pos.x -1, y = pos.y - 1, z = pos.z -1}).name == "air" and 
             minetest.get_node({x = pos.x +1, y = pos.y - 1, z = pos.z -1}).name == "air" and 
-            minetest.get_node({x = pos.x -1, y = pos.y - 1, z = pos.z +1}).name == "air" and 
+            minetest.get_node({x = pos.x -1, y = pos.y - 1, z = pos.z +1}).name == "air"
             ) then
             if cheatcount[name] == nil then
                 cheatcount[name] = 1
