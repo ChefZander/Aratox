@@ -39,7 +39,7 @@ minetest.register_chatcommand("aratox", {
     params = "",
     privs = {shout = true},
     func = function(playername, param)
-        minetest.chat_send_player(playername, "Aratox Anticheat v" .. version .. " (~Zander_200)")
+        minetest.chat_send_player(playername, "Aratox Anticheat v" .. version .. " (~Chef Zander)")
     end,
 })
 
